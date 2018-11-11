@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	<style>
+	#asd{
+	width:20%;
+	}
+	input[type=text], select, textarea{
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  resize: vertical;
+}
+
+/* Style the label to display next to the inputs */
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+}
+
+/* Style the submit button */
+input[type=submit] {
+  background-color: red;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float:left;
+}
+body {
+  font-size: 16px;
+  color: #fff;
+  background-color: #61122f;
+  font-family: 'Oxygen', sans-serif;
+}
+h1 {
+  width: 100%;
+  margin: 10px 15px 10px 0;
+}
+tr{
+border:none;
+}
+td{
+color:white;
+width:33.33%;
+  border-right: solid 1px black; 
+  border-left: solid 1px black;
+text-align:center;
+}
+th{
+
+  border-right: solid 1px black; 
+  border-left: solid 1px black;
+
+}
+#about{
+width:100%;
+background-color: #f6b319;
+border:5px solid black;
+
+}
+h1{
+color: #557c3e;
+}
+
+	</style>
+	</head>
+<body>
+
+    <h1>Please fill the feedback form</h1>
+    <div>
+	<form method="POST" action="/post-feedback" name="myForm">
+        <label>Name:<input type="text" name="client-name" required></label>
+        <br>
+        <label>Email:<input type="text" name="client-email" required ></label>
+        <br>
+		<label>Gender:<br>
+          <input type="radio" name="gender" value="male" checked> Male<br>
+  <input type="radio" name="gender" value="female"> Female<br>
+  <input type="radio" name="gender" value="other"> Other</label><br>
+  Branch:
+  <br>
+  <label>
+  <select name="branch">
+  <option value="india">india</option>
+  <option value="usa">usa</option>
+  <option value="canada">canada</option>
+  <option value="mexico">mexico</option>
+
+</select>
+</label>
+<br>
+		<label>Comment:<br><textarea cols=50 name="comment"></textarea></label>
+        <br>
+        <input id="mysubmit" type="submit" value="Submit" onclick="ValidateEmail()">
+    </form>
+    </div>
+	<a href="/view-feedbacks">View feedbacks</a>
+	<br>
+	<br>
+	<br>
+	<br>
+	<div id="about">
+	<table>
+	<tr>
+	<th color: #557c3e>Connect Online</th>
+	<th>Working hours</th>
+	<th>About us</th>
+	</tr>
+	<td>
+	Follow The Innsville online for the latest news and upcoming events.<br>
+	<a href="https://www.facebook.com/David-china-Bistro-1716034805167769/">Our facebook page</a><br>
+	</td>
+	<td>
+	Sun-Thurs: 11:15am - 10:00pm<br>
+Fri: 11:15am - 2:30pm<br>
+Saturday Closed<br>
+	</td>
+	<td>
+	
+	We're loved for our hand-breaded Boneless Buffalo Wings, our signature Broiled Sirloin Tips, our famous tall, frosted mugs of beer and more. All are served in a distinctly hearty New England style, enjoyed over good times with great family and friends. Simple, honest, genuine food. 
+
+Never pretentious. Always satisfying.
+	</td>
+	</table>
+	
+	</div>
+</body>
+
+
+</script>
+</html>
